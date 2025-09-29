@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-700 text-gray-400 select-none relative">
+    <div
+      class="flex justify-between items-start p-4 gap-4 bg-slate-900 relative"
+    >
+      <h2
+        class="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
+      >
+        myApp
+      </h2>
+      <div class="flex justify-center items-center">
+        <div
+          class="font font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent md:hidden cursor-pointer hover:from-green-500 hover:to-blue-800"
+          id="onClick"
+        >
+          click
+        </div>
+        <div
+          class="flex gap-4 absolute r -left-full top-16 bg-slate-500 flex-col w-full font-bold md:bg-transparent md:flex-row md:left-0 md:relative md:top-0 transition-[left]"
+          id="theContend"
+        >
+          <a
+            href=""
+            class="hover:bg-gray-400 p-4 md:p-0 md:hover:bg-transparent hover:text-white transition-colors"
+            >Home</a
+          >
+          <a
+            href=""
+            class="hover:bg-gray-400 p-4 md:p-0 md:hover:bg-transparent hover:text-white transition-colors"
+            >About</a
+          >
+          <a
+            href=""
+            class="hover:bg-gray-400 p-4 md:p-0 md:hover:bg-transparent hover:text-white transition-colors"
+            >Sing in</a
+          >
+          <a
+            href=""
+            class="hover:bg-gray-400 p-4 md:p-0 md:hover:bg-transparent hover:text-white transition-colors"
+            >Sing up</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-start px-8 my-5">
+      <h1 class="text-2xl font-bold text-center">to do list</h1>
+      <button
+        id="create"
+        class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold hover:bg-blue-700 transition-all"
+      >
+        + Create List
+      </button>
+    </div>
+    <div
+      id="cardBox"
+      class="flex flex-wrap gap-4 justify-center items-center my-10 mx-8"
+    ></div>
+    <div
+      class="fixed bg-black/30 backdrop-blur-sm w-full h-screen top-0 left-0 hidden justify-center items-center "
+      id="inputBox"
+    >
+      <div class="bg-gray-200 bg-gradient-to-r rounded-lg shadow-lg p-6 w-80">
+        <h2 class="text-lg font-bold mb-4">Create List</h2>
+        <form id="todoForm" class="space-y-4">
+          <label class="block">
+            <span class="text-gray-700">Task</span>
+            <input
+              placeholder="what you want to do.."
+              class="mt-1 block w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400 text-gray-800 outline-none"
+              type="text"
+              id="texts"
+              required
+            />
+          </label>
+          <div class="flex justify-between gap-2">
+            <button
+              type="button"
+              id="cancelBtn"
+              class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+`

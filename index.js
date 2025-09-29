@@ -72,6 +72,7 @@ const cancelfun = () => {
 
 createbtn.addEventListener("click", cancelfun)
 cancelBtn.addEventListener("click", cancelfun)
+inputBox.addEventListener("click",cancelfun)
 
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault()
